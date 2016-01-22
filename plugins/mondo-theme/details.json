@@ -18,7 +18,7 @@
     "settings": [
         {
             "name": "show_side_navigation",
-            "value": true
+            "value": false
         },
         {
             "name": "home_page_keywords",
@@ -43,8 +43,16 @@
         "content_templates":
         [
             {
-                "file": "index",
-                "name": "Blog"
+                "file": "about_us",
+                "name": "About Us"
+            },
+            {
+                "file": "contact_us",
+                "name": "Contact Us"
+            },
+            {
+                "file": "products",
+                "name": "Products"
             }
         ]
     }
