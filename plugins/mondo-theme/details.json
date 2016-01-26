@@ -43,6 +43,10 @@
         "content_templates":
         [
             {
+                "file": "index",
+                "name": "Index"
+            },
+            {
                 "file": "about_us",
                 "name": "About Us"
             },

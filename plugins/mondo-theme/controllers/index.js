@@ -70,16 +70,16 @@ module.exports = function IndexModule(pb) {
             TopMenu.getBootstrapNav(navigation, accountButtons, function(navigation, accountButtons) {
                 var pluginService = new pb.PluginService({site: self.site});
 
-                pluginService.getSettings('mondo-theme', function(err, mondo-themeSettings) {
+                pluginService.getSettings('mondo-theme', function(err, mondoSettings) {
                     var homePageKeywords = '';
                     var homePageDescription = '';
-                    for(var i = 0; i < mondo-themeSettings.length; i++) {
-                        switch(mondo-themeSettings[i].name) {
+                    for(var i = 0; i < mondoSettings.length; i++) {
+                        switch(mondoSettings[i].name) {
                             case 'home_page_keywords':
-                                homePageKeywords = mondo-themeSettings[i].value;
+                                homePageKeywords = mondoSettings[i].value;
                                 break;
                             case 'home_page_description':
-                                homePageDescription = mondo-themeSettings[i].value;
+                                homePageDescription = mondoSettings[i].value;
                                 break;
                             default:
                                 break;
@@ -171,6 +171,33 @@ module.exports = function IndexModule(pb) {
                 });
             });
         });
+    };
+
+    Index.prototype.getContentSpecificPageName = function(content, cb) {
+        if (!content) {
+            cb(null, pb.config.siteName);
+            return;
+        }
+
+        if(this.req.pencilblue_article || this.req.pencilblue_page) {
+            cb(null, pb.config.siteName + ' - ' + content.headline);
+        }
+        else if(this.req.pencilblue_section || this.req.pencilblue_topic) {
+
+            var objType = this.req.pencilblue_section ? 'section' : 'topic';
+            var dao     = new pb.DAO();
+            dao.loadById(this.req.pencilblue_section, objType, function(err, obj) {
+                if(util.isError(err) || obj === null) {
+                    cb(null, pb.config.siteName);
+                    return;
+                }
+
+                cb(null, pb.config.siteName + ' - ' + obj.name);
+            });
+        }
+        else {
+            cb(null, pb.config.siteName);
+        }
     };
 
     /**
