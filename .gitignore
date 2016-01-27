@@ -1,6 +1,7 @@
 .jshintrc
 .project
 .idea
+.ebignore
 public/media/
 public/docs/
 public/bower_components/
