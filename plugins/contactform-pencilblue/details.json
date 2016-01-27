@@ -1,0 +1,102 @@
+{
+    "uid": "contactform-pencilblue",
+    "name": "Contact Form",
+    "description": "Display a contact form on your PencilBlue site.",
+    "version": "1.0.1",
+    "pb_version": "0.4.x",
+    "author": {
+        "name": "Alex Curtis",
+        "website": "https://github.com/alexcurtis",
+        "email": "alx.curtis@gmail.com"
+    },
+    "settings": [
+        {
+            "name": "stylesheet",
+            "value": "/public/contactform-pencilblue/css/contact_form.css"
+        },
+        {
+            "name": "show_phone",
+            "value": true
+        }
+    ],
+    "permissions": {
+        "ACCESS_USER": [],
+        "ACCESS_WRITER": [],
+        "ACCESS_EDITOR": [],
+        "ACCESS_MANAGING_EDITOR": []
+    },
+    "main_module": {
+        "path": "contact_form.js"
+    },
+    "dependencies": {
+        "sweetcaptcha": "0.0.2-1",
+        "joi": "~6.9.1"
+    },
+    "cf_settings": {
+        "emailer": {
+            "enabled": false,
+            "to": "<CHANGE>@<THIS>.com",
+            "template": "email/default"
+        },
+        "captcha": {
+            "enabled": false
+        },
+        "objects": {
+            "enabled": true,
+            "type": "contactform",
+            "spec": {
+                "fields": {
+                    "name":     { "field_type": "text" },
+                    "email":    { "field_type": "text" },
+                    "date":     { "field_type": "date" },
+                    "subject":  { "field_type": "text" },
+                    "message":  { "field_type": "wysiwyg" }
+                }
+            }
+        },
+        "fields": {
+            "definitions": [
+                {
+                    "name":     "name",
+                    "enabled":  true,
+                    "required": true,
+                    "default":  "name_default",
+                    "editable": true,
+                    "type":     "text"
+                },
+                {
+                    "name":     "email",
+                    "enabled":  true,
+                    "required": true,
+                    "default":  "email_default",
+                    "editable": true,
+                    "type":     "email"
+                },
+                {
+                    "name":     "date",
+                    "enabled":  true,
+                    "required": false,
+                    "default":  "01/01/2015",
+                    "editable": true,
+                    "type":     "date"
+                },
+                {
+                    "name":     "subject",
+                    "enabled":  true,
+                    "required": true,
+                    "default":  "subject_default",
+                    "editable": true,
+                    "type":     "text"
+                },
+                {
+                    "name":     "message",
+                    "enabled":  true,
+                    "required": true,
+                    "default":  "message_default",
+                    "editable": true,
+                    "type":     "wysiwyg"
+                }
+            ]
+        }
+    }
+}

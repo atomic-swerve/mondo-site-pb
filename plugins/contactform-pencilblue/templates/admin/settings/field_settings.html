@@ -1,0 +1,62 @@
+^tmp_admin=head^
+
+<script type="text/javascript">
+    $('<link rel="stylesheet" type="text/css" href="/public/contactform-pencilblue/css/contact_form_settings.css">').appendTo(document.head);
+</script>
+
+<div class="col-md-9 cfsettings field-settings">
+    ^tmp_admin=elements=error_success^
+    ^tmp_admin=elements=sub_nav^
+    ^tmp_admin=elements=tab_nav^
+
+    <form name="FieldsForm" ng-submit="save()" novalidate>
+        <fieldset>
+
+            <table class="table table-responsive table-condensed fields-table">
+                <tr>
+                    <th class="enabled-column">
+                        <i class="fa fa-check-square" title="^loc_CF_ADMIN_ENABLED_LABEL^"></i>
+                    </th>
+                    <th>^loc_NAME^</th>
+                    <th>^loc_CF_ADMIN_DEFAULT_LABEL^</th>
+                    <th class="required-column">^loc_CF_ADMIN_REQUIRED_LABEL^</th>
+                    <th class="editable-column">
+                        <i class="fa fa-pencil-square-o" title="^loc_CF_ADMIN_EDITABLE_LABEL^"></i>
+                    </th>
+                    <th class="delete-column"> <i class="fa fa-trash" title="^loc_CF_ADMIN_DELETE_LABEL^"></th>
+                </tr>
+                <tr ng-repeat="def in settings.definitions">
+                    <td>
+                        <input type="checkbox" name="enabled" ng-model="def.enabled">
+                    </td>
+                    <td>
+                        <input class="form-control" type="text" name="name" ng-model="def.name">
+                    </td>
+                    <td>
+                        <input class="form-control" type="text" name="default" ng-model="def.default">
+                    </td>
+                    <td class="required-container">
+                        <input type="checkbox" name="required" ng-model="def.required">
+                    </td>
+                    <td>
+                        <input type="checkbox" name="editable" ng-model="def.editable">
+                    </td>
+                    <td>
+                        <a href="#" ng-click="delete(def)">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+
+            <a class="btn btn-default" href="/admin/plugins/contactform-pencilblue/settings" ng-disabled="!settings.enabled">
+                <i class="fa fa-ban"></i>&nbsp;Cancel
+            </a>
+            <button type="submit" class="btn btn-primary" ng-disabled="saving">
+                <i class="fa fa-save" ng-class="{'fa-save': !saving, 'fa-circle-o-notch fa-spin': saving}"></i>&nbsp;Save
+            </button>
+        </fieldset>
+    </form>
+</div>
+^tmp_angular=admin=settings=field_settings^
+^tmp_admin=footer^

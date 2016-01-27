@@ -1,0 +1,23 @@
+.nav-tabs {
+    margin-bottom: 15px;
+}
+
+/*Field Settings*/
+
+.field-settings td {
+    vertical-align: middle !important;
+}
+
+.field-settings .enabled-column,
+.field-settings .delete-column,
+.field-settings .editable-column {
+    width: 30px;
+}
+
+.field-settings .required-column {
+    width: 72px;
+}
+
+.fields-table .required-container {
+    text-align: center;
+}

@@ -1,0 +1,41 @@
+{
+  "uid": "twitter",
+  "name": "Twitter Plugin",
+  "description": "Gives access to tweets from Twitter using RESTful APIs.",
+  "version": "0.1.0",
+  "pb_version": "0.4.x",
+  "author": {
+    "name": "Corrine Olson",
+    "email": "corrine.olson@careerbuilder.com",
+    "website": ""
+  },
+  "settings": [
+    {
+      "name": "consumer_key",
+      "value": ""
+    },
+    {
+      "name": "consumer_secret",
+      "value": ""
+    },
+    {
+      "name": "access_token_key",
+      "value": ""
+    },
+    {
+      "name": "access_token_secret",
+      "value": ""
+    },
+    {
+      "name": "request_timeout_in_milliseconds",
+      "value": 5000
+    }
+  ],
+  "dependencies": {
+    "twitter": "1.2.5"
+  },
+  "permissions": { },
+  "main_module": {
+    "path": "twitter.js"
+  }
+}
