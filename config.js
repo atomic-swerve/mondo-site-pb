@@ -11,8 +11,7 @@
 
 module.exports = {
     "siteName": "MONDO",
-    "siteRoot": "http://localhost:8080",
-    "sitePort": 8080,
+    "siteRoot": "http://mondomeds.com",
     "logging": {
         "level": "info"
     },
@@ -30,7 +29,7 @@ module.exports = {
         "port": 6379
     },
     "settings": {
-        "use_memory": false,
+        "use_memory": true,
         "use_cache": false
     },
     "templates": {
@@ -39,7 +38,7 @@ module.exports = {
     },
     "plugins": {
         "caching": {
-            "use_memory": false,
+            "use_memory": true,
             "use_cache": false
         }
     },
