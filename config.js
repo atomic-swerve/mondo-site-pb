@@ -49,7 +49,7 @@ module.exports = {
         "storage": "mongo"
     },
     "media": {
-        "provider": "mongo",
+        "provider": "/plugins/s3-pencilblue/include/s3_media_provider.js",
         "max_upload_size": 6291456
     },
     "cluster": {
