@@ -391,7 +391,7 @@ module.exports = function BlogModule(pb) {
 
 
         if(this.req.pencilblue_article || this.req.pencilblue_page) {
-            cb(null, content.headline + ' | ' + pb.config.siteName);
+            cb(null, pb.config.siteName + ' - ' + content.headline);
         }
         else if(searchId = this.req.pencilblue_section || this.req.pencilblue_topic) {
 
@@ -405,7 +405,7 @@ module.exports = function BlogModule(pb) {
                     return;
                 }
 
-                cb(null, obj.name + ' | ' + pb.config.siteName);
+                cb(null, pb.config.siteName + ' - ' + obj.name);
             });
         }
         else {

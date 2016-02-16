@@ -119,6 +119,11 @@ module.exports = function HomePageSettingsModule(pb) {
         ];
         cb(null, routes);
     };
+
+    HomePageSettings.prototype.getContentSpecificPageName = function(cb) {
+        return cb(null, pb.config.siteName);
+    };
+
     //register admin sub-nav
     pb.AdminSubnavService.registerFor(SUB_NAV_KEY, HomePageSettings.getSubNavItems);
 

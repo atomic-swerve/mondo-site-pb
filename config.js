@@ -11,7 +11,7 @@
 
 module.exports = {
     "siteName": "MONDO",
-    "siteRoot": "http://mondo-site-pb-dev.us-west-2.elasticbeanstalk.com/",
+    "siteRoot": "http://mondomeds.com/",
     "logging": {
         "level": "info"
     },
