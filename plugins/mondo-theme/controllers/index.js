@@ -92,6 +92,9 @@ module.exports = function IndexModule(pb) {
                     self.ts.registerLocal('current_url', self.req.url);
                     self.ts.registerLocal('navigation', new pb.TemplateValue(navigation, false));
                     self.ts.registerLocal('account_buttons', new pb.TemplateValue(accountButtons, false));
+                    self.ts.registerLocal('page_name', function(flag, cb) {
+                        self.getContentSpecificPageName(util.isArray(data.content) && data.content.length > 0 ? data.content[0] : null, cb);
+                    });
                     self.ts.load('landing_page', function(err, template) {
                         if(util.isError(err)) {
                             content.content = '';
