@@ -57,6 +57,10 @@
             {
                 "file": "products",
                 "name": "Products"
+            },
+            {
+                "file": "testing",
+                "name": "Testing"
             }
         ]
     }
