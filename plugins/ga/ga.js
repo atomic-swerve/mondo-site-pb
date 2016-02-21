@@ -3,7 +3,7 @@ module.exports = function GoogleAnalyticsModule(pb) {
 
     //pb dependencies
     var util = pb.util;
-
+    
     /**
      * GoogleAnalytics - A sample for exemplifying what the main module file should
      * look like.
@@ -12,7 +12,7 @@ module.exports = function GoogleAnalyticsModule(pb) {
      * @constructor
      */
     function GoogleAnalytics(){}
-
+    
     /**
      * The ID for the analytics provider
      * @private
@@ -58,7 +58,7 @@ module.exports = function GoogleAnalyticsModule(pb) {
         var result = pb.AnalyticsManager.registerProvider(PROVIDER_NAME, GoogleAnalytics.onRequest);
         cb(null, result);
     };
-
+    
     /**
      * Called on each request
      *
@@ -68,7 +68,6 @@ module.exports = function GoogleAnalyticsModule(pb) {
         var pluginService = new pb.PluginService({site: pb.SiteService.getCurrentSite(siteId)});
         pluginService.getSettingsKV('ga', function(err, settings) {
             if (util.isError(err)) {
-                log.debug(err);
                 return cb(err, '');
             }
             else if (!settings || !settings.google_analytics_tracking_id || settings.google_analytics_tracking_id.length === 0) {
