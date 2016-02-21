@@ -13,7 +13,7 @@ module.exports = {
     "siteName": "MONDO",
     "siteRoot": "http://mondomeds.com/",
     "logging": {
-        "level": "info"
+        "level": "debug"
     },
     "db": {
         "type": "mongo",

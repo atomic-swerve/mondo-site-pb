@@ -68,6 +68,7 @@ module.exports = function GoogleAnalyticsModule(pb) {
         var pluginService = new pb.PluginService({site: pb.SiteService.getCurrentSite(siteId)});
         pluginService.getSettingsKV('ga', function(err, settings) {
             if (util.isError(err)) {
+                log.debug(err);
                 return cb(err, '');
             }
             else if (!settings || !settings.google_analytics_tracking_id || settings.google_analytics_tracking_id.length === 0) {
