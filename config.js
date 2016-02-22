@@ -11,17 +11,17 @@
 
 module.exports = {
     "siteName": "MONDO",
-    "siteRoot": "http://localhost:8080/",
-    "sitePort": "8080",
+    "siteRoot": process.env.SITE_ROOT,
+    "sitePort": process.env.SITE_PORT,
     "logging": {
         "level": "debug"
     },
     "db": {
         "type": "mongo",
         "servers": [
-            "mongodb://mondo_site_db_admin:M0nd0Fab@ds051605.mongolab.com:51605/mondo_site_db"
+            process.env.MONGO_URL
         ],
-        "name": "mondo_site_db",
+        "name": process.env.MONGO_NAME,
         "writeConcern": 1
     },
     "cache": {
