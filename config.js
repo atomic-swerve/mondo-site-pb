@@ -11,7 +11,8 @@
 
 module.exports = {
     "siteName": "MONDO",
-    "siteRoot": "http://mondomeds.com/",
+    "siteRoot": "http://localhost:8080/",
+    "sitePort": "8080",
     "logging": {
         "level": "debug"
     },
