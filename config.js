@@ -12,7 +12,6 @@
 module.exports = {
     "siteName": "MONDO",
     "siteRoot": process.env.SITE_ROOT,
-    "sitePort": process.env.SITE_PORT,
     "logging": {
         "level": "debug"
     },
