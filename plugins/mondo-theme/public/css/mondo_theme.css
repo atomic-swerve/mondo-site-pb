@@ -1,13 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
 
 @font-face {
-	font-family: WorkSans-Thin;
-	src: url(../fonts/WorkSans-Thin.otf);
+	font-family: BebasNeue-Regular;
+	src: url(../fonts/BebasNeue-Regular.otf);
  }
 
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: #fbfbfb url('../img/paper-bg.jpg');
+    background: #fbfbfb;
 }
 
 h1,
@@ -17,9 +17,14 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: WorkSans-Thin,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: BebasNeue-Regular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
     letter-spacing: 1px;
+    color: #414042;
+}
+
+h3, .h3 {
+    font-size: 32px;
 }
 
 p {
@@ -29,7 +34,7 @@ p {
 }
 
 hr {
-    max-width: 400px;
+    max-width: 200px;
     border-color: #999999;
     margin-top: 20px;
     margin-bottom: 30px;
@@ -55,10 +60,13 @@ hr {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 3px;
+    text-align: center;
 }
 
 .navbar-header {
-	background: rgba(245,245,245,0.9) url('../img/brown-bg.png');
+    border: 2.5px rgba(65, 64, 66, .5);
+    border-style: groove none;
+    background: rgba(65, 64, 66, .25) url('../img/hatched-bg.png');
 }
 
 .img-full {
@@ -89,16 +97,14 @@ hr {
     margin-bottom: 20px;
     padding: 30px 15px;
     background: #fefefe;
-    background: rgba(245,245,245,0.9);
 	border-radius: 5px;
-	box-shadow: 0 0 10px -6px #3f2e1b;
+	box-shadow: 0 0 13px -6px #111;
 
 }
 
 .intro-text {
     text-transform: uppercase;
-    font-size: 1.65em;
-    font-weight: 400;
+    font-size: 36px;
     letter-spacing: 1px;
     margin-top: -10px;
 }
@@ -106,7 +112,7 @@ hr {
 .img-border {
     float: none;
     margin: 0 auto 0;
-    border: #999999 solid 1px;
+    border: #414042 solid 1px;
 }
 
 .img-left {
@@ -115,14 +121,15 @@ hr {
 }
 
 footer {
-    background: #fff;
-    background: rgba(245,245,245,0.9) url('../img/brown-bg.png');
+    border: 2.5px rgba(65, 64, 66, .5);
+    border-style: groove none;
+    background: rgba(65, 64, 66, .25) url('../img/hatched-bg.png');
 }
 
 footer p {
     margin: 13px 0;
     padding: 0;
-    color: #483826;
+    color: #0C0A0E;
 }
 
 @media screen and (min-width:768px) {
@@ -178,19 +185,25 @@ footer p {
     }
 
     .navbar-default {
-        border: none;
-        background: rgba(245,245,245,0.9) url('../img/brown-bg.png');
+        border: 2px rgba(65, 64, 66, .5);
+        border-style: groove none;
+        background: rgba(65, 64, 66, .25) url('../img/hatched-bg.png');
+    }
+
+    .navbar-nav>li {
+        float: none;
+        display: inline-block;
     }
 
     .navbar-default .navbar-nav>li>a,
     .navbar-default .navbar-nav>.active>a  {
-        color: #483826;
+        color: #0C0A0E;
         background-color: transparent;
     }
 
     .navbar-default .navbar-nav>li>a:hover,
     .navbar-default .navbar-nav>.active>a:hover  {
-        color: #dddddd;
+        color: #1B1A1B;
         background-color: transparent;
     }
 
@@ -207,7 +220,8 @@ footer p {
         float: none;
         margin: 0 auto;
         table-layout: fixed;
-        font-size: 1.25em;
+        font-size: 1.3em;
+        text-align: center;
     }
 }
 
