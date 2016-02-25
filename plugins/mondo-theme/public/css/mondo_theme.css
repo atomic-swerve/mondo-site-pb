@@ -264,3 +264,18 @@ hr:first-child {
     margin: 0px;
 }
 
+.buy-button-wrapper {
+    text-align: center;
+}
+
+.vertical-align {
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

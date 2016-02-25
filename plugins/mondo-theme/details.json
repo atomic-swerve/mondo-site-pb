@@ -61,6 +61,18 @@
             {
                 "file": "testing",
                 "name": "Testing"
+            },
+            {
+                "file": "merchandise",
+                "name": "Merchandise"
+            },
+            {
+                "file": "sweatshirts",
+                "name": "Sweatshirts"
+            },
+            {
+                "file": "water_bottles",
+                "name": "Water Bottles"
             }
         ]
     }
