@@ -208,7 +208,7 @@ footer p {
     }
 
     .nav>li>a {
-        padding: 35px;
+        padding: 20px;
     }
 
     .navbar-nav>li>a {
@@ -291,5 +291,4 @@ hr:first-child {
 .vertical-align > [class*=" col-"] {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
