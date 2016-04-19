@@ -26,6 +26,8 @@
 	font-size: 12px;
 	width: 330px;
 	height: 330px;
+    max-width: 100%;
+    max-height: 100%;
 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -40,7 +42,7 @@
 }
 
 #modal_content .content_wrapper {
-	padding-top: 8em;
+	padding: 8em 1em 0;
 	margin:3em auto 0;
 	text-align: center;
 }
@@ -48,6 +50,7 @@
 #modal_content h2 {
 	margin: 0 0 0 0;
 	font:normal 14px/1.3em 'Gill Sans W01 Medium', Helvetica,arial,sans-serif;
+    text-align: center;
 }
 
 #modal_content p {
@@ -56,7 +59,7 @@
 	font:11px/1.5em "proxima-nova", Helvetica,arial,sans-serif;
 }
 
-#modal_content nav {font-size: 16px; display:table; width: 322px;}
+#modal_content nav {font-size: 16px; display:table; width: 100%;  padding-top: 10px;}
 #modal_content nav ul {display:table-row; width: 100%; margin:0; padding:0;}
 #modal_content nav li {display: table-cell; text-align: right; width: auto;}
 
@@ -76,19 +79,18 @@
 #modal_content nav a.av_btn {
 	display:block;
 	text-align:center;
-	width: 65px;
+	width: 75%;
 	border-radius: 23px;
 	margin:1em auto 0;
 	text-decoration: none;
 	padding:1em;
 	color: #fff;
-	font:normal .7em/1em 'AmericanTypwrterITCW01- 731031';
 	text-transform: none;
 	letter-spacing: 0;
 }
 
 #modal_content nav .av_go {
-	background-color: #7fbf4d;
+	background-color: #424142;
 }
 
 #modal_content nav .av_no {
@@ -96,7 +98,7 @@
 }
 
 #modal_content nav .av_btn:hover {
-	background-color: #424142;
+	background-color: #0C0A0E;
 }
 
 #modal_content #modal_regret_wrapper nav a.av_btn {
@@ -121,7 +123,7 @@
 	}
 
 	#modal_content .content_wrapper {
-		padding-top: 125px;
+		padding: 125px 1em 0;
 		margin:3em auto 0;
 		text-align: center;
 	}
@@ -136,7 +138,7 @@
 		line-height: 1.9em;
 	}
 
-	#modal_content nav {width: 396px;}
+	#modal_content nav {width: 100%;}
 
 	#modal_content nav a.av_btn {
 		padding:1em 1em;
